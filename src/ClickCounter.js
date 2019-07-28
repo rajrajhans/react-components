@@ -6,7 +6,9 @@ class ClickCounter extends React.Component{
     constructor(props){
         super(props);
 
-        this.onChange = this.onChange.bind(this)
+        this.increase = this.increase.bind(this);
+        this.resett = this.resett.bind(this);
+        this.decrease = this.decrease.bind(this);
 
     }
 
@@ -14,9 +16,21 @@ class ClickCounter extends React.Component{
         count : 0
     };
 
-    onChange(){
+    increase(){
         this.setState({
             count : this.state.count+1
+        })
+    }
+
+    resett(){
+        this.setState({
+            count : 0
+        })
+    }
+
+    decrease(){
+        this.setState({
+            count : this.state.count - 1
         })
     }
 
@@ -24,7 +38,11 @@ class ClickCounter extends React.Component{
         return(
             <div className={"container"}>
                 <h1 className={"para"}>Click Counter</h1>
-                <input type={"button"} value={"Click Me"} className={"button"} onClick={this.onChange}/>
+                <div className={"buttons"}>
+                    <input type={"button"} value={"Decrease -"} className={"button"} onClick={this.decrease}/>
+                    <input type={"button"} value={"Reset 0"} className={"button"} onClick={this.resett}/>
+                    <input type={"button"} value={"Increase +"} className={"button"} onClick={this.increase}/>
+                </div>
                 <h3 className={"para"}>Counter - {this.state.count}</h3>
             </div>
         )

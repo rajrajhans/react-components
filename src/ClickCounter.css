@@ -1,12 +1,15 @@
-.container{
-    width: 150px;
-    height: 50px;
-    margin: 20vh auto;
+.container {
 }
 
 .button{
+    display: inline;
     width: 150px;
     height: 50px;
+    margin: 10px;
+}
+
+.buttons{
+    text-align: center;
 }
 
 .para{
