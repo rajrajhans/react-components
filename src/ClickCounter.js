@@ -44,6 +44,7 @@ class ClickCounter extends React.Component{
                     <input type={"button"} value={"Increase +"} className={"button"} onClick={this.increase}/>
                 </div>
                 <h3 className={"para"}>Counter - {this.state.count}</h3>
+                <p className={"para"}>Made with <i className="fa fa-heart"/> by <a href={"http://rajrajhans.com"}>Raj Rajhans</a></p>
             </div>
         )
     }
