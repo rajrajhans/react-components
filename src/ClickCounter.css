@@ -1,0 +1,14 @@
+.container{
+    width: 150px;
+    height: 50px;
+    margin: 20vh auto;
+}
+
+.button{
+    width: 150px;
+    height: 50px;
+}
+
+.para{
+    text-align: center;
+}
